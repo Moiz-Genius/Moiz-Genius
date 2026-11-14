@@ -161,8 +161,8 @@ def render_svg(stats):
     contribs = stats["contributions"]
     top_langs = stats["top_langs"]
 
-    # Calculate progress bar segments for 200px width
-    bar_width = 210
+    # Calculate progress bar segments for 256px width
+    bar_width = 256
     segments_svg = []
     current_x = 0
 
@@ -179,46 +179,56 @@ def render_svg(stats):
     # Top languages legend
     legend_svg = []
     for i, lang in enumerate(top_langs[:4]):
-        col = 0 if i < 2 else 110
-        row = (i % 2) * 22
+        col = 0 if i < 2 else 135
+        row = (i % 2) * 24
         legend_svg.append(f"""
         <g transform="translate({col}, {row})">
           <circle cx="5" cy="5" r="4.5" fill="{lang['color']}" />
-          <text x="14" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#c9d1d9" font-weight="500">{lang['name']}</text>
-          <text x="88" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#8b949e" text-anchor="end">{lang['pct']}%</text>
+          <text x="14" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#cbd5e1" font-weight="500">{lang['name']}</text>
+          <text x="124" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#94a3b8" text-anchor="end">{lang['pct']}%</text>
         </g>""")
 
     svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 215" width="100%" height="215" preserveAspectRatio="xMidYMid meet">
   <defs>
     <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117" />
-      <stop offset="100%" stop-color="#161b22" />
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#0d1527" />
+    </linearGradient>
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.5" />
     </linearGradient>
     <linearGradient id="sweep-line" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0" />
-      <stop offset="50%" stop-color="#79c0ff" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0" />
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#7dd3fc" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
     </linearGradient>
     <linearGradient id="bar-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
       <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
+    <pattern id="stats-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-opacity="0.4" />
+    </pattern>
     <filter id="card-glow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#010409" flood-opacity="0.6" />
     </filter>
   </defs>
 
   <style>
-    .header-title {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 600; fill: #58a6ff; letter-spacing: 0.3px; }}
-    .metric-label {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-size: 12px; fill: #8b949e; font-weight: 400; }}
+    .header-title {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #38bdf8; letter-spacing: 0.3px; }}
+    .metric-label {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-size: 12px; fill: #94a3b8; font-weight: 400; }}
     .metric-value {{ font-family: 'JetBrains Mono', 'Segoe UI', monospace; font-size: 13px; fill: #f0f6fc; font-weight: 700; }}
-    .section-title {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 600; fill: #c9d1d9; }}
+    .section-title {{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 600; fill: #e2e8f0; }}
     .footer-tag {{ font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #3fb950; font-weight: 500; letter-spacing: 0.5px; }}
   </style>
 
   <!-- Card Frame -->
-  <rect x="1" y="1" width="538" height="213" rx="10" fill="url(#card-grad)" stroke="#30363d" stroke-width="1.2" filter="url(#card-glow)" />
+  <rect x="1" y="1" width="538" height="213" rx="12" fill="url(#card-grad)" stroke="url(#card-border)" stroke-width="1.3" filter="url(#card-glow)" />
+  <rect x="1" y="1" width="538" height="213" rx="12" fill="url(#stats-grid)" />
 
   <!-- Header -->
   <g transform="translate(24, 22)">
@@ -361,4 +371,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

@@ -15,7 +15,7 @@
   </a>
 </p>
 
----
+<p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## ⚡ About Me
 
@@ -26,7 +26,7 @@ I'm **Muhammad Moiz**, a Class 10 student at **Hamza Army Public School** in Isl
 - ⚡ **Python & CLI Tooling**: Building high-concurrency async CLI tools, segmented media downloaders, and OCR search utilities.
 - 🛡️ **Cybersecurity Foundation**: Completed a 3-month Certified Ethical Hacking (CEH) course (Govt. of Punjab / Punjab HEC) and comfortable working in **Linux** environments.
 
----
+<p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## 🤖 Featured System: OpenClaw Discord AI Task Agent
 
@@ -38,7 +38,7 @@ A server-hosted AI automation agent built with **OpenClaw** that receives natura
   <img src="./assets/openclaw-architecture.svg" alt="OpenClaw Discord AI Task Agent Architecture" width="100%">
 </p>
 
----
+<p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## 🚀 Flagship Projects
 
@@ -51,61 +51,59 @@ A server-hosted AI automation agent built with **OpenClaw** that receives natura
 | **Pinterest Downloader CLI** | Async Python CLI to extract and download original-quality images, HD videos, and GIFs from Pinterest URLs and `pin.it` links. | Python • HTTPX • BeautifulSoup4 • Rich | [View Code](https://github.com/Moiz-Genius/pinterest-downloader) |
 | **Wraith Agent Spec** | Full architectural blueprint and build specification for Wraith, a local-first CLI autonomous coding agent. | Architecture Spec • TypeScript • Node.js 20+ | [View Code](https://github.com/Moiz-Genius/wraith-spec) |
 
----
+<p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## 🛠️ Tech Stack & Tools
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🤖 AI & Automation</h3>
-      <ul>
-        <li><b>LLM APIs:</b> Google Gemini, Anthropic Claude, OpenAI, DeepSeek</li>
-        <li><b>Agents & Bots:</b> OpenClaw, Discord Bots, WhatsApp Bots, Mineflayer</li>
-        <li><b>Data & Vision:</b> Prompt Engineering, EasyOCR, Web Scraping</li>
-      </ul>
-      <h3>🌐 Web & App Development</h3>
-      <ul>
-        <li><b>Frontend:</b> React, Next.js, HTML5, CSS3, JavaScript, TypeScript</li>
-        <li><b>Backend & Desktop:</b> Node.js, Express, Electron</li>
-        <li><b>Cloud & DB:</b> Firebase</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <h3>⚙️ Systems & Languages</h3>
-      <ul>
-        <li><b>Languages:</b> Python, JavaScript, TypeScript, C++</li>
-        <li><b>OS & CLI:</b> Linux, Git, GitHub Actions, Rich CLI</li>
-        <li><b>Media & Networking:</b> HTTPX Async, yt-dlp, Segmented Downloads</li>
-      </ul>
-      <h3>🛡️ Security Track</h3>
-      <ul>
-        <li><b>Fundamentals:</b> Ethical Hacking Methodology, Vulnerability Basics, Network Protocols</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+**AI & Automation**
+<p>
+  <img src="https://img.shields.io/badge/Google_Gemini-0f172a?style=for-the-badge&logo=googlegemini&logoColor=38bdf8" alt="Google Gemini">
+  <img src="https://img.shields.io/badge/Anthropic_Claude-0f172a?style=for-the-badge&logo=anthropic&logoColor=a78bfa" alt="Claude">
+  <img src="https://img.shields.io/badge/OpenAI-0f172a?style=for-the-badge&logo=openai&logoColor=22c55e" alt="OpenAI">
+  <img src="https://img.shields.io/badge/DeepSeek-0f172a?style=for-the-badge&logoColor=818cf8" alt="DeepSeek">
+  <img src="https://img.shields.io/badge/OpenClaw-0f172a?style=for-the-badge&logoColor=38bdf8" alt="OpenClaw">
+  <img src="https://img.shields.io/badge/Discord_Bots-0f172a?style=for-the-badge&logo=discord&logoColor=5865F2" alt="Discord Bots">
+  <img src="https://img.shields.io/badge/WhatsApp_Bots-0f172a?style=for-the-badge&logo=whatsapp&logoColor=25D366" alt="WhatsApp Bots">
+</p>
 
----
+**Full-Stack, Desktop & Cloud**
+<p>
+  <img src="https://img.shields.io/badge/React-0f172a?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/Next.js-0f172a?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js">
+  <img src="https://img.shields.io/badge/Node.js-0f172a?style=for-the-badge&logo=nodedotjs&logoColor=339933" alt="Node.js">
+  <img src="https://img.shields.io/badge/Express-0f172a?style=for-the-badge&logo=express&logoColor=white" alt="Express">
+  <img src="https://img.shields.io/badge/Electron-0f172a?style=for-the-badge&logo=electron&logoColor=47848F" alt="Electron">
+  <img src="https://img.shields.io/badge/Firebase-0f172a?style=for-the-badge&logo=firebase&logoColor=FFCA28" alt="Firebase">
+</p>
+
+**Languages & Systems**
+<p>
+  <img src="https://img.shields.io/badge/Python-0f172a?style=for-the-badge&logo=python&logoColor=3776AB" alt="Python">
+  <img src="https://img.shields.io/badge/JavaScript-0f172a?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript">
+  <img src="https://img.shields.io/badge/TypeScript-0f172a?style=for-the-badge&logo=typescript&logoColor=3178C6" alt="TypeScript">
+  <img src="https://img.shields.io/badge/C%2B%2B-0f172a?style=for-the-badge&logo=cplusplus&logoColor=00599C" alt="C++">
+  <img src="https://img.shields.io/badge/Linux-0f172a?style=for-the-badge&logo=linux&logoColor=FCC624" alt="Linux">
+  <img src="https://img.shields.io/badge/GitHub_Actions-0f172a?style=for-the-badge&logo=githubactions&logoColor=2088FF" alt="GitHub Actions">
+</p>
+
+<p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## 📜 Verified Certificates
 
-| Credential | Issuer | Verification / ID | Date |
-| :--- | :--- | :--- | :---: |
-| **1 Million Prompters** — Certificate of Completion | Dubai Future Foundation & Dubai Centre for Artificial Intelligence | [Verify Certificate](https://omp.dub.ai/certificate/nE4ZIVviYKeK) | — |
-| **Certified Ethical Hacking (CEH)** — 3-Month Course Completion | Government of Punjab / Punjab HEC Initiative | ID: `00e0aa725c` | 17/03/2024 |
+| Credential | Issuer | Verification / ID |
+| :--- | :--- | :--- |
+| **1 Million Prompters** — Certificate of Completion | Dubai Future Foundation & Dubai Centre for Artificial Intelligence | [Verify Certificate](https://omp.dub.ai/certificate/nE4ZIVviYKeK) |
+| **Certified Ethical Hacking (CEH)** — 3-Month Course Completion | Government of Punjab / Punjab HEC Initiative (17/03/2024) | ID: `00e0aa725c` |
 
----
+<p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## 📊 GitHub Stats
-
-> Auto-updated via GitHub Actions (`generate-stats.py`) and committed directly to this repository — zero external widget downtime.
 
 <p align="center">
   <img src="./assets/github-stats.svg" alt="Muhammad Moiz GitHub Statistics" width="100%">
 </p>
 
----
+<p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## 📫 Contact
 

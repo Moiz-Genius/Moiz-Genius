@@ -75,7 +75,7 @@
       </circle>
       <path d="M8 3a5 5 0 100 10A5 5 0 008 3zm0 2a3 3 0 110 6 3 3 0 010-6z" fill="#38bdf8" transform="scale(0.9) translate(1, 1)" />
       <text x="24" y="12" class="metric-label">Annual Commits:</text>
-      <text x="180" y="12" class="metric-value" text-anchor="end">25</text>
+      <text x="180" y="12" class="metric-value" text-anchor="end">26</text>
     </g>
 
     <!-- Public Repos -->
@@ -95,7 +95,7 @@
       </circle>
       <path d="M4 2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm1 3v2h2V5H5zm4 0v2h2V5H9zm-4 4v2h2V9H5zm4 0v2h2V9H9z" fill="#3fb950" transform="scale(0.85) translate(1.5, 1.5)" />
       <text x="24" y="12" class="metric-label">Total Contributions:</text>
-      <text x="180" y="12" class="metric-value" text-anchor="end">32</text>
+      <text x="180" y="12" class="metric-value" text-anchor="end">33</text>
     </g>
   </g>
 

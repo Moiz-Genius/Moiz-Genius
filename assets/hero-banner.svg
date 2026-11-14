@@ -15,12 +15,15 @@
       <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.6" />
     </linearGradient>
 
-    <!-- Name Glow & Gradient -->
-    <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Animated Name Shimmer Gradient -->
+    <linearGradient id="name-grad" x1="-100%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="40%" stop-color="#60a5fa" />
-      <stop offset="75%" stop-color="#a78bfa" />
+      <stop offset="25%" stop-color="#60a5fa" />
+      <stop offset="50%" stop-color="#a78bfa" />
+      <stop offset="75%" stop-color="#e0f2fe" />
       <stop offset="100%" stop-color="#38bdf8" />
+      <animate attributeName="x1" values="-100%;100%" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;300%" dur="5s" repeatCount="indefinite" />
     </linearGradient>
 
     <!-- Accent Line Gradient -->
@@ -30,6 +33,13 @@
       <stop offset="50%" stop-color="#818cf8" stop-opacity="1" />
       <stop offset="75%" stop-color="#38bdf8" stop-opacity="1" />
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Sweep Beam Gradient -->
+    <linearGradient id="sweep-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#7dd3fc" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
     </linearGradient>
 
     <!-- Pill Gradient -->
@@ -112,12 +122,19 @@
   <rect x="2" y="2" width="956" height="256" rx="16" fill="url(#grid)" />
   <rect x="2" y="2" width="956" height="256" rx="16" fill="url(#dots)" />
 
-  <!-- Radial Glow Behind Title -->
-  <circle cx="480" cy="115" r="180" fill="#38bdf8" fill-opacity="0.06" filter="url(#glow-cyan)" />
-  <circle cx="200" cy="80" r="120" fill="#818cf8" fill-opacity="0.04" filter="url(#glow-cyan)" />
-  <circle cx="760" cy="140" r="140" fill="#06b6d4" fill-opacity="0.05" filter="url(#glow-cyan)" />
+  <!-- Breathing Radial Glow Behind Title -->
+  <circle cx="480" cy="115" r="180" fill="#38bdf8" fill-opacity="0.06" filter="url(#glow-cyan)">
+    <animate attributeName="fill-opacity" values="0.04;0.10;0.04" dur="5s" repeatCount="indefinite" />
+    <animate attributeName="r" values="170;195;170" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="200" cy="80" r="120" fill="#818cf8" fill-opacity="0.04" filter="url(#glow-cyan)">
+    <animate attributeName="fill-opacity" values="0.03;0.08;0.03" dur="6.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="760" cy="140" r="140" fill="#06b6d4" fill-opacity="0.05" filter="url(#glow-cyan)">
+    <animate attributeName="fill-opacity" values="0.03;0.09;0.03" dur="7s" repeatCount="indefinite" />
+  </circle>
 
-  <!-- Circuit Trace Decors (Left & Right) -->
+  <!-- Circuit Trace Decors + Animated Signal Packets -->
   <g stroke="#38bdf8" stroke-opacity="0.25" stroke-width="1.2" fill="none">
     <path d="M 40 40 L 90 40 L 115 65 L 170 65" />
     <circle cx="170" cy="65" r="2.5" fill="#38bdf8" fill-opacity="0.6" />
@@ -130,6 +147,24 @@
     <circle cx="800" cy="155" r="2.5" fill="#818cf8" fill-opacity="0.6" />
   </g>
 
+  <!-- Traveling Signal Pulses -->
+  <circle r="2.6" fill="#38bdf8" filter="url(#glow-subtle)">
+    <animateMotion path="M 40 40 L 90 40 L 115 65 L 170 65" dur="3.2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0;1;1;0" dur="3.2s" repeatCount="indefinite" />
+  </circle>
+  <circle r="2.6" fill="#38bdf8" filter="url(#glow-subtle)">
+    <animateMotion path="M 40 180 L 100 180 L 125 155 L 160 155" dur="3.8s" begin="1.1s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0;1;1;0" dur="3.8s" begin="1.1s" repeatCount="indefinite" />
+  </circle>
+  <circle r="2.6" fill="#a78bfa" filter="url(#glow-subtle)">
+    <animateMotion path="M 920 40 L 870 40 L 845 65 L 790 65" dur="3.4s" begin="0.6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0;1;1;0" dur="3.4s" begin="0.6s" repeatCount="indefinite" />
+  </circle>
+  <circle r="2.6" fill="#a78bfa" filter="url(#glow-subtle)">
+    <animateMotion path="M 920 180 L 860 180 L 835 155 L 800 155" dur="4s" begin="1.8s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0;1;1;0" dur="4s" begin="1.8s" repeatCount="indefinite" />
+  </circle>
+
   <!-- Top Header / Terminal Bar -->
   <g id="top-bar">
     <!-- Terminal Window Dots -->
@@ -138,19 +173,22 @@
     <circle cx="68" cy="30" r="4.5" fill="#22c55e" fill-opacity="0.8" />
 
     <!-- Terminal Status Badge -->
-    <rect x="92" y="20" width="310" height="20" rx="10" fill="#0369a1" fill-opacity="0.15" stroke="#0284c7" stroke-opacity="0.3" stroke-width="0.8" />
+    <rect x="92" y="20" width="322" height="20" rx="10" fill="#0369a1" fill-opacity="0.15" stroke="#0284c7" stroke-opacity="0.3" stroke-width="0.8" />
     <circle cx="104" cy="30" r="3" fill="#22c55e" filter="url(#glow-subtle)">
-      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite" />
     </circle>
-    <text x="114" y="34" class="status-text">SYS.STATUS: ONLINE // AUTONOMOUS AI AGENTS</text>
+    <text x="114" y="34" class="status-text">SYS.STATUS: ONLINE // AI AUTOMATION<tspan fill="#38bdf8">_<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" /></tspan></text>
 
     <!-- Location & Origin Stamp -->
     <text x="918" y="34" text-anchor="end" class="coord-text">LOC: 33.6844° N, 73.0479° E [ISB/PK]</text>
   </g>
 
-  <!-- Horizontal Divider Line with Center Accent -->
+  <!-- Horizontal Divider Line with Center Accent & Laser Sweep -->
   <line x1="30" y1="52" x2="930" y2="52" stroke="#334155" stroke-opacity="0.6" stroke-width="0.8" />
   <line x1="280" y1="52" x2="680" y2="52" stroke="url(#accent-grad)" stroke-width="1.5" />
+  <rect x="30" y="51" width="140" height="2" rx="1" fill="url(#sweep-grad)" filter="url(#glow-subtle)">
+    <animate attributeName="x" values="30;790;30" dur="6s" repeatCount="indefinite" />
+  </rect>
 
   <!-- Main Hero Content -->
   <!-- Name -->
@@ -158,7 +196,7 @@
 
   <!-- Subtitle -->
   <text x="480" y="145" text-anchor="middle" class="subtitle-text">
-    Full-Stack Developer <tspan fill="#38bdf8">•</tspan> Autonomous AI Automation <tspan fill="#818cf8">•</tspan> Security Enthusiast
+    AI Automation &amp; Bots <tspan fill="#38bdf8">•</tspan> Full-Stack Builder <tspan fill="#818cf8">•</tspan> Security Track
   </text>
 
   <!-- Tech Badges / Pills Row -->
@@ -166,28 +204,36 @@
     <!-- Pill 1: Languages -->
     <g transform="translate(85, 0)">
       <rect x="0" y="0" width="180" height="34" rx="8" fill="url(#pill-grad)" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1" />
-      <circle cx="18" cy="17" r="4" fill="#38bdf8" />
+      <circle cx="18" cy="17" r="4" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" begin="0s" repeatCount="indefinite" />
+      </circle>
       <text x="32" y="22" class="pill-label">Python • C++ • TS</text>
     </g>
 
     <!-- Pill 2: Web & Full-Stack -->
     <g transform="translate(280, 0)">
       <rect x="0" y="0" width="200" height="34" rx="8" fill="url(#pill-grad)" stroke="#818cf8" stroke-opacity="0.35" stroke-width="1" />
-      <circle cx="18" cy="17" r="4" fill="#818cf8" />
+      <circle cx="18" cy="17" r="4" fill="#818cf8">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" begin="0.6s" repeatCount="indefinite" />
+      </circle>
       <text x="32" y="22" class="pill-label">React • Next.js • Node</text>
     </g>
 
     <!-- Pill 3: AI Agents -->
     <g transform="translate(495, 0)">
       <rect x="0" y="0" width="220" height="34" rx="8" fill="url(#pill-grad)" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="1" />
-      <circle cx="18" cy="17" r="4" fill="#38bdf8" />
+      <circle cx="18" cy="17" r="4" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" begin="1.2s" repeatCount="indefinite" />
+      </circle>
       <text x="32" y="22" class="pill-label">OpenClaw • Multi-LLM</text>
     </g>
 
     <!-- Pill 4: Security & Systems -->
     <g transform="translate(730, 0)">
       <rect x="0" y="0" width="145" height="34" rx="8" fill="url(#pill-grad)" stroke="#22c55e" stroke-opacity="0.35" stroke-width="1" />
-      <circle cx="18" cy="17" r="4" fill="#22c55e" />
+      <circle cx="18" cy="17" r="4" fill="#22c55e">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" begin="1.8s" repeatCount="indefinite" />
+      </circle>
       <text x="32" y="22" class="pill-label">Security • Linux</text>
     </g>
   </g>
@@ -195,12 +241,15 @@
   <!-- Bottom Accent / Status Strip -->
   <g id="bottom-strip">
     <line x1="30" y1="228" x2="930" y2="228" stroke="#1e293b" stroke-opacity="0.8" stroke-width="0.8" />
-    <text x="480" y="244" text-anchor="middle" class="coord-text">AUTONOMOUS MULTI-AGENT ARCHITECTURE • HIGH-CONCURRENCY ENGINEERING</text>
+    <text x="480" y="244" text-anchor="middle" class="coord-text">AI WORKFLOW AUTOMATION • MULTI-AGENT BOTS • FULL-STACK SYSTEMS</text>
   </g>
 
-  <!-- Corner Brackets -->
-  <path d="M 12 28 L 12 12 L 28 12" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" />
-  <path d="M 948 28 L 948 12 L 932 12" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" />
-  <path d="M 12 232 L 12 248 L 28 248" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" />
-  <path d="M 948 232 L 948 248 L 932 248" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" />
+  <!-- Animated Corner Brackets -->
+  <g stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round" fill="none">
+    <path d="M 12 28 L 12 12 L 28 12" />
+    <path d="M 948 28 L 948 12 L 932 12" />
+    <path d="M 12 232 L 12 248 L 28 248" />
+    <path d="M 948 232 L 948 248 L 932 248" />
+    <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
+  </g>
 </svg>

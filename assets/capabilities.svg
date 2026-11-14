@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="100%" height="340" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg-cap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#0a1122" />
+      <stop offset="100%" stop-color="#0d172e" />
+    </linearGradient>
+
+    <linearGradient id="card-surface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="0.98" />
+    </linearGradient>
+
+    <linearGradient id="outer-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.5" />
+    </linearGradient>
+
+    <linearGradient id="bar-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <linearGradient id="bar-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#16a34a" />
+      <stop offset="100%" stop-color="#4ade80" />
+    </linearGradient>
+
+    <pattern id="cap-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-opacity="0.4" />
+    </pattern>
+
+    <filter id="cap-glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .hdr { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 11.5px; font-weight: 700; fill: #38bdf8; letter-spacing: 1px; }
+    .hdr-right { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 10.5px; font-weight: 700; fill: #4ade80; letter-spacing: 0.6px; }
+    .c-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif; font-size: 15px; font-weight: 700; }
+    .c-stack { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 10.5px; font-weight: 600; fill: #94a3b8; }
+    .c-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif; font-size: 12px; fill: #cbd5e1; }
+    .c-badge { font-family: 'JetBrains Mono', 'Consolas', monospace; font-size: 9.5px; font-weight: 700; letter-spacing: 0.6px; }
+  </style>
+
+  <!-- Frame -->
+  <rect x="2" y="2" width="916" height="336" rx="14" fill="url(#bg-cap)" stroke="url(#outer-stroke)" stroke-width="1.3" />
+  <rect x="2" y="2" width="916" height="336" rx="14" fill="url(#cap-grid)" />
+
+  <!-- Top Header -->
+  <g transform="translate(22, 22)">
+    <circle cx="6" cy="5" r="3.5" fill="#38bdf8" filter="url(#cap-glow)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="18" y="9" class="hdr">CAPABILITIES &amp; SERVICES // WHAT I CAN BUILD FOR YOU</text>
+    <rect x="748" y="-4" width="128" height="19" rx="9.5" fill="#14532d" fill-opacity="0.35" stroke="#22c55e" stroke-opacity="0.5" stroke-width="0.8" />
+    <circle cx="760" cy="5.5" r="2.8" fill="#4ade80">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite" />
+    </circle>
+    <text x="770" y="9" class="hdr-right">READY TO SHIP</text>
+  </g>
+  <line x1="22" y1="40" x2="898" y2="40" stroke="#1e293b" stroke-width="1" />
+
+  <!-- CARD 1: AI Workflow & Business Automation -->
+  <g transform="translate(22, 54)">
+    <rect x="0" y="0" width="428" height="128" rx="10" fill="url(#card-surface)" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="0.35;0.85;0.35" dur="3.6s" begin="0s" repeatCount="indefinite" />
+    </rect>
+    <text x="18" y="27" fill="#38bdf8" class="c-title">AI Business Automation</text>
+    <rect x="338" y="13" width="74" height="18" rx="9" fill="#0369a1" fill-opacity="0.25" stroke="#38bdf8" stroke-opacity="0.45" stroke-width="0.8" />
+    <circle cx="349" cy="22" r="2.5" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <text x="357" y="25.5" fill="#7dd3fc" class="c-badge">MULTI-LLM</text>
+
+    <text x="18" y="49" class="c-stack">OpenClaw • Gemini • Claude • DeepSeek • OpenAI</text>
+    <text x="18" y="72" class="c-desc">Automate repetitive business tasks, lead ops &amp; multi-step</text>
+    <text x="18" y="89" class="c-desc">LLM pipelines with live API routing and error fallback.</text>
+
+    <!-- Animated Pipeline Progress Bar -->
+    <rect x="18" y="106" width="392" height="6" rx="3" fill="#1e293b" />
+    <rect x="18" y="106" width="120" height="6" rx="3" fill="url(#bar-cyan)">
+      <animate attributeName="x" values="18;290;18" dur="3.2s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- CARD 2: Discord & WhatsApp Bots -->
+  <g transform="translate(470, 54)">
+    <rect x="0" y="0" width="428" height="128" rx="10" fill="url(#card-surface)" stroke="#818cf8" stroke-opacity="0.45" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="0.35;0.85;0.35" dur="3.6s" begin="0.9s" repeatCount="indefinite" />
+    </rect>
+    <text x="18" y="27" fill="#a5b4fc" class="c-title">Discord &amp; WhatsApp Bots</text>
+    <rect x="342" y="13" width="70" height="18" rx="9" fill="#312e81" fill-opacity="0.35" stroke="#818cf8" stroke-opacity="0.5" stroke-width="0.8" />
+    <circle cx="353" cy="22" r="2.5" fill="#4ade80">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.3s" repeatCount="indefinite" />
+    </circle>
+    <text x="361" y="25.5" fill="#c7d2fe" class="c-badge">24/7 LIVE</text>
+
+    <text x="18" y="49" class="c-stack">Linux Server Daemons • Webhooks • Bot Gateways</text>
+    <text x="18" y="72" class="c-desc">Always-on server bots that execute real tasks, answer</text>
+    <text x="18" y="89" class="c-desc">clients &amp; trigger workflows directly from chat messages.</text>
+
+    <!-- Animated Equalizer / Signal Bars -->
+    <g transform="translate(18, 102)">
+      <rect x="0" y="4" width="6" height="8" rx="2" fill="#818cf8">
+        <animate attributeName="height" values="4;12;4" dur="1.1s" begin="0s" repeatCount="indefinite" />
+        <animate attributeName="y" values="8;0;8" dur="1.1s" begin="0s" repeatCount="indefinite" />
+      </rect>
+      <rect x="10" y="2" width="6" height="10" rx="2" fill="#38bdf8">
+        <animate attributeName="height" values="12;4;12" dur="1.1s" begin="0.2s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;8;0" dur="1.1s" begin="0.2s" repeatCount="indefinite" />
+      </rect>
+      <rect x="20" y="4" width="6" height="8" rx="2" fill="#818cf8">
+        <animate attributeName="height" values="4;12;4" dur="1.1s" begin="0.4s" repeatCount="indefinite" />
+        <animate attributeName="y" values="8;0;8" dur="1.1s" begin="0.4s" repeatCount="indefinite" />
+      </rect>
+      <rect x="30" y="2" width="6" height="10" rx="2" fill="#38bdf8">
+        <animate attributeName="height" values="12;4;12" dur="1.1s" begin="0.6s" repeatCount="indefinite" />
+        <animate attributeName="y" values="0;8;0" dur="1.1s" begin="0.6s" repeatCount="indefinite" />
+      </rect>
+      <rect x="40" y="4" width="6" height="8" rx="2" fill="#4ade80">
+        <animate attributeName="height" values="5;12;5" dur="1.1s" begin="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" values="7;0;7" dur="1.1s" begin="0.8s" repeatCount="indefinite" />
+      </rect>
+      <text x="58" y="10" class="c-stack">Listening for Discord / WhatsApp events...</text>
+    </g>
+  </g>
+
+  <!-- CARD 3: Full-Stack & Desktop Apps -->
+  <g transform="translate(22, 196)">
+    <rect x="0" y="0" width="428" height="128" rx="10" fill="url(#card-surface)" stroke="#22c55e" stroke-opacity="0.45" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="0.35;0.85;0.35" dur="3.6s" begin="1.8s" repeatCount="indefinite" />
+    </rect>
+    <text x="18" y="27" fill="#4ade80" class="c-title">Full-Stack &amp; Desktop Apps</text>
+    <rect x="342" y="13" width="70" height="18" rx="9" fill="#14532d" fill-opacity="0.35" stroke="#22c55e" stroke-opacity="0.5" stroke-width="0.8" />
+    <circle cx="353" cy="22" r="2.5" fill="#4ade80">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite" />
+    </circle>
+    <text x="361" y="25.5" fill="#bbf7d0" class="c-badge">SHIPPED</text>
+
+    <text x="18" y="49" class="c-stack">React • Next.js • Node • Express • Firebase • Electron</text>
+    <text x="18" y="72" class="c-desc">Fast web MVPs, caching backends, dashboards &amp; desktop</text>
+    <text x="18" y="89" class="c-desc">apps with hardware acceleration and native ad blocking.</text>
+
+    <!-- Animated Build Progress Bar -->
+    <rect x="18" y="106" width="392" height="6" rx="3" fill="#1e293b" />
+    <rect x="18" y="106" width="160" height="6" rx="3" fill="url(#bar-green)">
+      <animate attributeName="width" values="40;392;40" dur="4.2s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- CARD 4: Python Automation, Scraping & Security -->
+  <g transform="translate(470, 196)">
+    <rect x="0" y="0" width="428" height="128" rx="10" fill="url(#card-surface)" stroke="#f59e0b" stroke-opacity="0.45" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="0.35;0.85;0.35" dur="3.6s" begin="2.7s" repeatCount="indefinite" />
+    </rect>
+    <text x="18" y="27" fill="#fbbf24" class="c-title">Python CLI, OCR &amp; Security</text>
+    <rect x="336" y="13" width="76" height="18" rx="9" fill="#78350f" fill-opacity="0.3" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="0.8" />
+    <circle cx="347" cy="22" r="2.5" fill="#fbbf24">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite" />
+    </circle>
+    <text x="355" y="25.5" fill="#fde68a" class="c-badge">CEH TRACK</text>
+
+    <text x="18" y="49" class="c-stack">Python Async • HTTPX • yt-dlp • EasyOCR • Linux</text>
+    <text x="18" y="72" class="c-desc">Multi-segmented downloaders, video frame OCR search,</text>
+    <text x="18" y="89" class="c-desc">concurrent scrapers &amp; security-conscious Linux tooling.</text>
+
+    <!-- Animated Scan Pulse Line -->
+    <rect x="18" y="106" width="392" height="6" rx="3" fill="#1e293b" />
+    <rect x="18" y="106" width="90" height="6" rx="3" fill="#f59e0b" fill-opacity="0.85">
+      <animate attributeName="x" values="18;320;18" dur="2.8s" repeatCount="indefinite" />
+    </rect>
+  </g>
+</svg>

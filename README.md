@@ -17,22 +17,19 @@
 
 <p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
-## ⚡ About Me
+## ⚡ What I Can Build For You
 
-I'm **Muhammad Moiz**, a Class 10 student at **Hamza Army Public School** in Islamabad, Pakistan, focused on **AI Workflow Automation**, **Bot Engineering**, and **Rapid Full-Stack App Building** — open to freelance projects and remote opportunities.
+Class 10 student at **Hamza Army Public School** (Islamabad, Pakistan) shipping **AI workflow automations**, **24/7 Discord & WhatsApp bots**, and **full-stack web/desktop apps** — ready for freelance & remote work.
 
-- 🤖 **AI Automation & Agents**: Built a server-hosted Discord AI task agent with **OpenClaw** wired to **Gemini**, **DeepSeek**, and **OpenAI** APIs, plus **WhatsApp** & **Discord** automation bots.
-- 💻 **Full-Stack & Desktop Apps**: Shipping web apps with **React**, **Next.js**, **Node.js**, **Express**, and **Firebase**, plus desktop apps with **Electron**.
-- ⚡ **Python & CLI Tooling**: Building high-concurrency async CLI tools, segmented media downloaders, and OCR search utilities.
-- 🛡️ **Cybersecurity Foundation**: Completed a 3-month Certified Ethical Hacking (CEH) course (Govt. of Punjab / Punjab HEC) and comfortable working in **Linux** environments.
+<p align="center">
+  <img src="./assets/capabilities.svg" alt="Capabilities and Services Showcase" width="100%">
+</p>
 
 <p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## 🤖 Featured System: OpenClaw Discord AI Task Agent
 
-> **Deployment:** Linux Server • **Interface:** Discord Messages • **Providers:** Gemini, DeepSeek & OpenAI APIs
-
-A server-hosted AI automation agent built with **OpenClaw** that receives natural-language instructions directly in Discord and executes tasks on a live server using multi-provider LLM routing.
+Server-hosted AI agent built with **OpenClaw** on Linux that executes tasks directly from Discord messages via multi-provider routing (**Gemini**, **DeepSeek**, **OpenAI**).
 
 <p align="center">
   <img src="./assets/openclaw-architecture.svg" alt="OpenClaw Discord AI Task Agent Architecture" width="100%">
@@ -97,17 +94,18 @@ A server-hosted AI automation agent built with **OpenClaw** that receives natura
 
 <p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
-## 📊 GitHub Stats
+## 📊 Live GitHub Analytics & Activity
 
 <p align="center">
   <img src="./assets/github-stats.svg" alt="Muhammad Moiz GitHub Statistics" width="100%">
+</p>
+
+<p align="center">
+  <img src="./assets/github-snake-dark.svg" alt="Contribution Snake Animation" width="100%">
 </p>
 
 <p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## 📫 Contact
 
-- **Email:** [opgamermoiz@gmail.com](mailto:opgamermoiz@gmail.com)
-- **LinkedIn:** [linkedin.com/in/muhammed-moiz-282302376](https://www.linkedin.com/in/muhammed-moiz-282302376)
-- **Discord:** `devilytmoiz`
-- **Location:** Islamabad, Pakistan
+- **Email:** [opgamermoiz@gmail.com](mailto:opgamermoiz@gmail.com) • **LinkedIn:** [linkedin.com/in/muhammed-moiz-282302376](https://www.linkedin.com/in/muhammed-moiz-282302376) • **Discord:** `devilytmoiz` • **Islamabad, Pakistan**

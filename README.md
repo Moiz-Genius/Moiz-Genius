@@ -39,15 +39,18 @@ Server-hosted AI agent built with **OpenClaw** on Linux that executes tasks dire
 
 ## 🚀 Flagship Projects
 
-| Project | Summary | Stack | Repo |
-| :--- | :--- | :--- | :---: |
-| **Minecraft Bot Controller** | Multi-bot Minecraft automation controller with pathfinding, combat, inventory handling, web dashboard, and AI conversation routing. | Node.js • Mineflayer • Express • HTML/CSS | [View Code](https://github.com/Moiz-Genius/minecraft-bot-controller) |
-| **Smart Video Downloader** | Multi-segmented video downloader (`yt-dlp` + HTTP Range) with stream muxing, frame extraction, and EasyOCR scene text search. | Python • yt-dlp • EasyOCR • Rich | [View Code](https://github.com/Moiz-Genius/smart-video-downloader) |
-| **Muslims Browser** | Privacy-focused desktop web browser with hardware-accelerated Chromium flags, multi-tab BrowserViews, and native ad blocking. | Electron • Electron Forge • JavaScript | [View Code](https://github.com/Moiz-Genius/muslims-browser) |
-| **SpeedTube (YouTube Client)** | Lightweight YouTube web client with a 30-minute in-memory Express caching backend and persistent iframe playback. | Node.js • Express 5 • Vanilla JS | [View Code](https://github.com/Moiz-Genius/youtube-clone) |
-| **Pinterest Downloader CLI** | Async Python CLI to extract and download original-quality images, HD videos, and GIFs from Pinterest URLs and `pin.it` links. | Python • HTTPX • BeautifulSoup4 • Rich | [View Code](https://github.com/Moiz-Genius/pinterest-downloader) |
-| **Wraith Agent Spec** | Full architectural blueprint and build specification for Wraith, a local-first CLI autonomous coding agent. | Architecture Spec • TypeScript • Node.js 20+ | [View Code](https://github.com/Moiz-Genius/wraith-spec) |
-
+<p align="center">
+  <a href="https://github.com/Moiz-Genius/minecraft-bot-controller"><img src="./assets/project-minecraft.svg" alt="Minecraft Bot Controller" width="49%"></a>
+  <a href="https://github.com/Moiz-Genius/smart-video-downloader"><img src="./assets/project-downloader.svg" alt="Smart Video Downloader" width="49%"></a>
+</p>
+<p align="center">
+  <a href="https://github.com/Moiz-Genius/muslims-browser"><img src="./assets/project-browser.svg" alt="Muslims Browser" width="49%"></a>
+  <a href="https://github.com/Moiz-Genius/youtube-clone"><img src="./assets/project-speedtube.svg" alt="SpeedTube YouTube Client" width="49%"></a>
+</p>
+<p align="center">
+  <a href="https://github.com/Moiz-Genius/pinterest-downloader"><img src="./assets/project-pinterest.svg" alt="Pinterest Downloader CLI" width="49%"></a>
+  <a href="https://github.com/Moiz-Genius/wraith-spec"><img src="./assets/project-wraith.svg" alt="Wraith Agent Spec" width="49%"></a>
+</p>
 <p align="center"><img src="./assets/divider.svg" alt="" width="100%"></p>
 
 ## 🛠️ Tech Stack & Tools

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 215" width="100%" height="215" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
+    </linearGradient>
+    <filter id="card-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#010409" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <style>
+    .header-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 600; fill: #58a6ff; letter-spacing: 0.3px; }
+    .metric-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-size: 12px; fill: #8b949e; font-weight: 400; }
+    .metric-value { font-family: 'JetBrains Mono', 'Segoe UI', monospace; font-size: 13px; fill: #f0f6fc; font-weight: 700; }
+    .section-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 600; fill: #c9d1d9; }
+    .footer-tag { font-family: 'JetBrains Mono', monospace; font-size: 9.5px; fill: #3fb950; font-weight: 500; letter-spacing: 0.5px; }
+  </style>
+
+  <!-- Card Frame -->
+  <rect x="1" y="1" width="538" height="213" rx="10" fill="url(#card-grad)" stroke="#30363d" stroke-width="1.2" filter="url(#card-glow)" />
+
+  <!-- Header -->
+  <g transform="translate(24, 22)">
+    <!-- GitHub Octicon / Activity Icon -->
+    <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm1 12H7V7h2v5zm0-6H7V4h2v2z" fill="#58a6ff" fill-opacity="0.2" transform="scale(1.2)" />
+    <svg x="0" y="0" width="18" height="18" viewBox="0 0 16 16" fill="#58a6ff">
+      <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9 1.15 1.48.5 1.46 2.5 1.04 2.5 1.04 0 .68.01 1.25.01 1.46 0 .21-.15.46-.55.38A8.013 8.013 0 0 1 0 8c0-4.42 3.58-8 8-8z"/>
+    </svg>
+    <text x="26" y="14" class="header-title">Muhammad Moiz (Moiz-Genius) • GitHub Analytics</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="24" y1="46" x2="516" y2="46" stroke="#21262d" stroke-width="1" />
+
+  <!-- Left Column: Metrics -->
+  <g transform="translate(24, 66)">
+    <!-- Stars -->
+    <g transform="translate(0, 0)">
+      <circle cx="8" cy="8" r="7" fill="#e3b341" fill-opacity="0.15" />
+      <path d="M8 2l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6z" fill="#e3b341" transform="scale(0.85) translate(1.4, 1.4)" />
+      <text x="24" y="12" class="metric-label">Total Stars Earned:</text>
+      <text x="180" y="12" class="metric-value" text-anchor="end">0</text>
+    </g>
+
+    <!-- Commits -->
+    <g transform="translate(0, 28)">
+      <circle cx="8" cy="8" r="7" fill="#38bdf8" fill-opacity="0.15" />
+      <path d="M8 3a5 5 0 100 10A5 5 0 008 3zm0 2a3 3 0 110 6 3 3 0 010-6z" fill="#38bdf8" transform="scale(0.9) translate(1, 1)" />
+      <text x="24" y="12" class="metric-label">Annual Commits:</text>
+      <text x="180" y="12" class="metric-value" text-anchor="end">14</text>
+    </g>
+
+    <!-- Public Repos -->
+    <g transform="translate(0, 56)">
+      <circle cx="8" cy="8" r="7" fill="#a78bfa" fill-opacity="0.15" />
+      <path d="M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v6h10V5H3z" fill="#a78bfa" transform="scale(0.85) translate(1.5, 1.5)" />
+      <text x="24" y="12" class="metric-label">Public Repositories:</text>
+      <text x="180" y="12" class="metric-value" text-anchor="end">7</text>
+    </g>
+
+    <!-- Total Contributions -->
+    <g transform="translate(0, 84)">
+      <circle cx="8" cy="8" r="7" fill="#3fb950" fill-opacity="0.15" />
+      <path d="M4 2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm1 3v2h2V5H5zm4 0v2h2V5H9zm-4 4v2h2V9H5zm4 0v2h2V9H9z" fill="#3fb950" transform="scale(0.85) translate(1.5, 1.5)" />
+      <text x="24" y="12" class="metric-label">Total Contributions:</text>
+      <text x="180" y="12" class="metric-value" text-anchor="end">22</text>
+    </g>
+  </g>
+
+  <!-- Vertical Divider -->
+  <line x1="230" y1="60" x2="230" y2="175" stroke="#21262d" stroke-width="1" />
+
+  <!-- Right Column: Top Languages -->
+  <g transform="translate(254, 62)">
+    <text x="0" y="10" class="section-title">Top Languages &amp; Stack</text>
+
+    <!-- Language Progress Bar (Rounded clip) -->
+    <g transform="translate(0, 20)">
+      <clipPath id="bar-clip">
+        <rect x="0" y="0" width="210" height="9" rx="4.5" />
+      </clipPath>
+      <g clip-path="url(#bar-clip)">
+        <rect x="0.0" y="0" width="101.8" height="9" fill="#f1e05a" /><rect x="101.8" y="0" width="37.2" height="9" fill="#663399" /><rect x="139.0" y="0" width="36.8" height="9" fill="#3572A5" /><rect x="175.8" y="0" width="34.2" height="9" fill="#e34c26" />
+      </g>
+    </g>
+
+    <!-- Languages Grid -->
+    <g transform="translate(0, 42)">
+      
+        <g transform="translate(0, 0)">
+          <circle cx="5" cy="5" r="4.5" fill="#f1e05a" />
+          <text x="14" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#c9d1d9" font-weight="500">JavaScript</text>
+          <text x="88" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#8b949e" text-anchor="end">48.5%</text>
+        </g>
+        <g transform="translate(0, 22)">
+          <circle cx="5" cy="5" r="4.5" fill="#663399" />
+          <text x="14" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#c9d1d9" font-weight="500">CSS</text>
+          <text x="88" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#8b949e" text-anchor="end">17.7%</text>
+        </g>
+        <g transform="translate(110, 0)">
+          <circle cx="5" cy="5" r="4.5" fill="#3572A5" />
+          <text x="14" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#c9d1d9" font-weight="500">Python</text>
+          <text x="88" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#8b949e" text-anchor="end">17.5%</text>
+        </g>
+        <g transform="translate(110, 22)">
+          <circle cx="5" cy="5" r="4.5" fill="#e34c26" />
+          <text x="14" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" fill="#c9d1d9" font-weight="500">HTML</text>
+          <text x="88" y="8" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5" fill="#8b949e" text-anchor="end">16.3%</text>
+        </g>
+    </g>
+  </g>
+
+  <!-- Footer Status Bar -->
+  <g transform="translate(24, 192)">
+    <line x1="0" y1="0" x2="492" y2="0" stroke="#21262d" stroke-width="1" />
+    <circle cx="6" cy="11" r="3" fill="#3fb950" />
+    <text x="16" y="14" class="footer-tag">AUTONOMOUS DISPATCH // GITHUB ACTIONS 100% RELIABLE</text>
+    <text x="492" y="14" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="9.5" fill="#6e7681" text-anchor="end">Live GraphQL Sync</text>
+  </g>
+</svg>

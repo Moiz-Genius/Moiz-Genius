@@ -194,6 +194,16 @@ def render_svg(stats):
       <stop offset="0%" stop-color="#0d1117" />
       <stop offset="100%" stop-color="#161b22" />
     </linearGradient>
+    <linearGradient id="sweep-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#79c0ff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="bar-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
     <filter id="card-glow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#010409" flood-opacity="0.6" />
     </filter>
@@ -220,14 +230,19 @@ def render_svg(stats):
     <text x="26" y="14" class="header-title">Muhammad Moiz (Moiz-Genius) • GitHub Analytics</text>
   </g>
 
-  <!-- Divider -->
+  <!-- Divider + Sweep -->
   <line x1="24" y1="46" x2="516" y2="46" stroke="#21262d" stroke-width="1" />
+  <rect x="24" y="45.2" width="90" height="1.6" rx="0.8" fill="url(#sweep-line)">
+    <animate attributeName="x" values="24;426;24" dur="5s" repeatCount="indefinite" />
+  </rect>
 
   <!-- Left Column: Metrics -->
   <g transform="translate(24, 66)">
     <!-- Stars -->
     <g transform="translate(0, 0)">
-      <circle cx="8" cy="8" r="7" fill="#e3b341" fill-opacity="0.15" />
+      <circle cx="8" cy="8" r="7" fill="#e3b341" fill-opacity="0.15">
+        <animate attributeName="fill-opacity" values="0.12;0.38;0.12" dur="2.8s" begin="0s" repeatCount="indefinite" />
+      </circle>
       <path d="M8 2l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6z" fill="#e3b341" transform="scale(0.85) translate(1.4, 1.4)" />
       <text x="24" y="12" class="metric-label">Total Stars Earned:</text>
       <text x="180" y="12" class="metric-value" text-anchor="end">{stars}</text>
@@ -235,7 +250,9 @@ def render_svg(stats):
 
     <!-- Commits -->
     <g transform="translate(0, 28)">
-      <circle cx="8" cy="8" r="7" fill="#38bdf8" fill-opacity="0.15" />
+      <circle cx="8" cy="8" r="7" fill="#38bdf8" fill-opacity="0.15">
+        <animate attributeName="fill-opacity" values="0.12;0.38;0.12" dur="2.8s" begin="0.7s" repeatCount="indefinite" />
+      </circle>
       <path d="M8 3a5 5 0 100 10A5 5 0 008 3zm0 2a3 3 0 110 6 3 3 0 010-6z" fill="#38bdf8" transform="scale(0.9) translate(1, 1)" />
       <text x="24" y="12" class="metric-label">Annual Commits:</text>
       <text x="180" y="12" class="metric-value" text-anchor="end">{commits}</text>
@@ -243,7 +260,9 @@ def render_svg(stats):
 
     <!-- Public Repos -->
     <g transform="translate(0, 56)">
-      <circle cx="8" cy="8" r="7" fill="#a78bfa" fill-opacity="0.15" />
+      <circle cx="8" cy="8" r="7" fill="#a78bfa" fill-opacity="0.15">
+        <animate attributeName="fill-opacity" values="0.12;0.38;0.12" dur="2.8s" begin="1.4s" repeatCount="indefinite" />
+      </circle>
       <path d="M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v6h10V5H3z" fill="#a78bfa" transform="scale(0.85) translate(1.5, 1.5)" />
       <text x="24" y="12" class="metric-label">Public Repositories:</text>
       <text x="180" y="12" class="metric-value" text-anchor="end">{repos}</text>
@@ -251,7 +270,9 @@ def render_svg(stats):
 
     <!-- Total Contributions -->
     <g transform="translate(0, 84)">
-      <circle cx="8" cy="8" r="7" fill="#3fb950" fill-opacity="0.15" />
+      <circle cx="8" cy="8" r="7" fill="#3fb950" fill-opacity="0.15">
+        <animate attributeName="fill-opacity" values="0.12;0.38;0.12" dur="2.8s" begin="2.1s" repeatCount="indefinite" />
+      </circle>
       <path d="M4 2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4a2 2 0 012-2zm1 3v2h2V5H5zm4 0v2h2V5H9zm-4 4v2h2V9H5zm4 0v2h2V9H9z" fill="#3fb950" transform="scale(0.85) translate(1.5, 1.5)" />
       <text x="24" y="12" class="metric-label">Total Contributions:</text>
       <text x="180" y="12" class="metric-value" text-anchor="end">{contribs}</text>
@@ -265,13 +286,18 @@ def render_svg(stats):
   <g transform="translate(254, 62)">
     <text x="0" y="10" class="section-title">Top Languages &amp; Stack</text>
 
-    <!-- Language Progress Bar (Rounded clip) -->
+    <!-- Language Progress Bar (Rounded clip + animated reveal & sheen) -->
     <g transform="translate(0, 20)">
       <clipPath id="bar-clip">
-        <rect x="0" y="0" width="{bar_width}" height="9" rx="4.5" />
+        <rect x="0" y="0" width="0" height="9" rx="4.5">
+          <animate attributeName="width" from="0" to="{bar_width}" dur="1.1s" fill="freeze" />
+        </rect>
       </clipPath>
       <g clip-path="url(#bar-clip)">
         {''.join(segments_svg)}
+        <rect x="-50" y="0" width="50" height="9" fill="url(#bar-sheen)">
+          <animate attributeName="x" values="-50;{bar_width + 50}" dur="3.6s" repeatCount="indefinite" />
+        </rect>
       </g>
     </g>
 
@@ -284,8 +310,10 @@ def render_svg(stats):
   <!-- Footer Status Bar -->
   <g transform="translate(24, 192)">
     <line x1="0" y1="0" x2="492" y2="0" stroke="#21262d" stroke-width="1" />
-    <circle cx="6" cy="11" r="3" fill="#3fb950" />
-    <text x="16" y="14" class="footer-tag">AUTONOMOUS DISPATCH // GITHUB ACTIONS 100% RELIABLE</text>
+    <circle cx="6" cy="11" r="3" fill="#3fb950">
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="16" y="14" class="footer-tag">GITHUB ACTIONS LIVE STATS • AUTO-SYNCED DAILY</text>
     <text x="492" y="14" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="9.5" fill="#6e7681" text-anchor="end">Live GraphQL Sync</text>
   </g>
 </svg>"""
@@ -333,3 +361,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

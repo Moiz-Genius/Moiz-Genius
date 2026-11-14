@@ -188,7 +188,7 @@
     <g transform="translate(730, 0)">
       <rect x="0" y="0" width="145" height="34" rx="8" fill="url(#pill-grad)" stroke="#22c55e" stroke-opacity="0.35" stroke-width="1" />
       <circle cx="18" cy="17" r="4" fill="#22c55e" />
-      <text x="32" y="22" class="pill-label">CEH • Linux OS</text>
+      <text x="32" y="22" class="pill-label">Security • Linux</text>
     </g>
   </g>
 

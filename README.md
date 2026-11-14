@@ -34,23 +34,9 @@ I'm **Muhammad Moiz**, a Class 10 student at **Hamza Army Public School** in Isl
 
 A server-hosted AI automation agent built with **OpenClaw** that receives natural-language instructions directly in Discord and executes tasks on a live server using multi-provider LLM routing.
 
-```
-┌───────────────────────────────────────────────────────────┐
-│                      DISCORD CLIENT                       │
-│         Send task instructions via Discord messages       │
-└─────────────────────────────┬─────────────────────────────┘
-                              │ Bot Gateway
-┌─────────────────────────────▼─────────────────────────────┐
-│                 OPENCLAW AGENT (LINUX SERVER)             │
-│   • Parses task intent & maintains session context        │
-│   • Routes requests across Gemini, DeepSeek & OpenAI APIs │
-│   • Executes automated workflows & returns results        │
-└─────────────────────────────┬─────────────────────────────┘
-                              │ API Integrations
-        ┌─────────────────────┼─────────────────────┐
-        ▼                     ▼                     ▼
-  Google Gemini          DeepSeek API           OpenAI API
-```
+<p align="center">
+  <img src="./assets/openclaw-architecture.svg" alt="OpenClaw Discord AI Task Agent Architecture" width="100%">
+</p>
 
 ---
 

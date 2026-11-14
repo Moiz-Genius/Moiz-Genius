@@ -10,6 +10,10 @@ on:
     paths-ignore:
       - 'assets/github-stats.svg'
 
+concurrency:
+  group: stats-update
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -42,5 +46,6 @@ jobs:
             echo "No changes in stats; skipping commit."
           else
             git commit -m "chore(stats): dynamic metrics refresh [skip ci]"
+            git pull --rebase origin main
             git push
           fi

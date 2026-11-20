@@ -19,7 +19,7 @@
 
 ## ⚡ What I Can Build For You
 
-Class 10 student at **Hamza Army Public School** (Islamabad, Pakistan) shipping **AI workflow automations**, **24/7 Discord & WhatsApp bots**, and **full-stack web/desktop apps** — ready for freelance & remote work.
+Class 10 student at **Federal School** (Islamabad, Pakistan) shipping **AI workflow automations**, **24/7 Discord & WhatsApp bots**, and **full-stack web/desktop apps** — ready for freelance & remote work.
 
 <p align="center">
   <img src="./assets/capabilities.svg" alt="Capabilities and Services Showcase" width="100%">
